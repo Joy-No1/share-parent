@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.share.sharedevice.mapper.GenTableMapper">
+
+    <resultMap id="BaseResultMap" type="com.share.sharedevice.entity.GenTable">
+            <id property="table_id" column="table_id" />
+            <result property="table_name" column="table_name" />
+            <result property="table_comment" column="table_comment" />
+            <result property="sub_table_name" column="sub_table_name" />
+            <result property="sub_table_fk_name" column="sub_table_fk_name" />
+            <result property="class_name" column="class_name" />
+            <result property="tpl_category" column="tpl_category" />
+            <result property="tpl_web_type" column="tpl_web_type" />
+            <result property="package_name" column="package_name" />
+            <result property="module_name" column="module_name" />
+            <result property="business_name" column="business_name" />
+            <result property="function_name" column="function_name" />
+            <result property="function_author" column="function_author" />
+            <result property="gen_type" column="gen_type" />
+            <result property="gen_path" column="gen_path" />
+            <result property="options" column="options" />
+            <result property="create_by" column="create_by" />
+            <result property="create_time" column="create_time" />
+            <result property="update_by" column="update_by" />
+            <result property="update_time" column="update_time" />
+            <result property="remark" column="remark" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        table_id,table_name,table_comment,sub_table_name,sub_table_fk_name,class_name,
+        tpl_category,tpl_web_type,package_name,module_name,business_name,
+        function_name,function_author,gen_type,gen_path,options,
+        create_by,create_time,update_by,update_time,remark
+    </sql>
+</mapper>
