@@ -22,4 +22,26 @@
         id,name,total_slots,description,status,del_flag,
         create_by,create_time,update_by,update_time,remark
     </sql>
+
+    <select id="selectCabinetTypeList" resultType="com.share.sharedevice.entity.CabinetType"
+            parameterType="com.share.sharedevice.entity.CabinetType">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM cabinet_type
+        <where>
+            del_flag=0
+            <if test="name !=null and name!='' ">
+                AND name like concat ('%',#{name},'%')
+            </if>
+            <if test="totalSlots !=null">
+                AND total_slots =#{totalSlots}
+            </if>
+            <if test="description !=null and description!='' ">
+                AND description =#{description}
+            </if>
+            <if test="status !=null and status !='' ">
+                AND status =#{status}
+            </if>
+        </where>
+    </select>
 </mapper>
