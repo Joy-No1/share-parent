@@ -13,4 +13,6 @@ import java.util.List;
 public interface CabinetService extends IService<Cabinet> {
 
     List<Cabinet> selectListCabinet(Cabinet cabinet);
+
+    List<Cabinet> searchNoUseList(String keyword);
 }

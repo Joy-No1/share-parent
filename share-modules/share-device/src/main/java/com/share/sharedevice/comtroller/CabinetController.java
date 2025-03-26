@@ -57,5 +57,11 @@ public class CabinetController extends BaseController {
         return toAjax(cabinetService.removeBatchByIds(Arrays.asList(ids)));
     }
 
+    @Operation(summary = "搜索未使用的柜机")
+    @GetMapping(value = "/searchNoUseList/{keyword}")
+    public AjaxResult searchNoUseList(@PathVariable String keyword) {
+        return success(cabinetService.searchNoUseList(keyword));
+    }
+
 }
 
