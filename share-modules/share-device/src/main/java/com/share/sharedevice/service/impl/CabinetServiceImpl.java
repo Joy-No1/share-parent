@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.share.sharedevice.entity.Cabinet;
 import com.share.sharedevice.service.CabinetService;
 import com.share.sharedevice.mapper.CabinetMapper;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
 * @author joy
@@ -15,6 +18,14 @@ import org.springframework.stereotype.Service;
 public class CabinetServiceImpl extends ServiceImpl<CabinetMapper, Cabinet>
     implements CabinetService{
 
+    @Resource
+    private CabinetMapper cabinetMapper;
+
+
+    @Override
+    public List<Cabinet> selectListCabinet(Cabinet cabinet) {
+        return cabinetMapper.selectListCabinet(cabinet);
+    }
 }
 
 

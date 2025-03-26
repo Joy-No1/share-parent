@@ -3,6 +3,8 @@ package com.share.sharedevice.service;
 import com.share.sharedevice.entity.Cabinet;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
 * @author joy
 * @description 针对表【cabinet(充电宝柜机表)】的数据库操作Service
@@ -10,4 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface CabinetService extends IService<Cabinet> {
 
+    List<Cabinet> selectListCabinet(Cabinet cabinet);
 }
